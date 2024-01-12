@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: var(--Very-dark-blue-main-BG);
+}
+
+.contianer {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--Very-dark-blue-card-BG);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 2rem 1rem;
+}
+
+.img-top {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.img-top img {
+    width: 100%;
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(178, 100%, 50%, 0.331);
+    display: none;
+}
+
+.img-top:hover .image-overlay {
+    display: block;
+
+}
+
+.image-overlay img {
+    position: absolute;
+    width: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading {
+    color: var(--White);
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.heading:hover {
+    color: var(--Cyan);
+}
+
+.details {
+    color: var(--Soft-blue);
+    font-size: 0.8em;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.rate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.price {
+    color: var(--Cyan);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.price img {
+    width: 10px;
+    margin-right: 5px;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    color: var(--Soft-blue);
+}
+
+.date img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+hr {
+    opacity: 0.1;
+    margin-top: 20px;
+    color: var(--Very-dark-blue-line);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user img {
+    width: 30px;
+    border: 1px solid var(--Soft-blue);
+    border-radius: 50%;
+}
+
+.user-details {
+    color: var(--Soft-blue);
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+.user-details span {
+    color: var(--White);
+    cursor: pointer;
+}
+
+.user-details span:hover {
+    color: var(--Cyan);
+    font-weight: 600;
+}
